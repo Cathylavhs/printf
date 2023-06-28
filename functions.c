@@ -17,7 +17,7 @@ int print_char(va_list types, char buffer[],
 {
 	char d = va_arg(types, int);
 
-	return (handle_write_char(d buffer, flags, width, precision, size));
+	return (handle_write_char(d, buffer, flags, width, precision, size));
 }
 /************************* PRINT A STRING *************************/
 /**
@@ -123,7 +123,7 @@ int print_int(va_list types, char buffer[],
 		buffer[j--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
-	num = (unsigned long int)n;
+	num = (unsigned long int)m;
 
 	if (m < 0)
 	{
@@ -181,7 +181,7 @@ int print_binary(va_list types, char buffer[],
 		{
 			char y = '0' + a[j];
 
-			write(1, &z, 1);
+			write(1, &y, 1);
 			count++;
 		}
 	}
